@@ -3,7 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
-// Initialize Product model (table) by extending off Sequelize's Model class
+// Initialize Product model (table) by extending off Sequelize Model class
 class Product extends Model {}
 
 // set up fields and rules for Product model
@@ -14,7 +14,7 @@ Product.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
-      autoIncrement: true
+      autoIncrement: true,
     },
     product_name: {
       type: DataTypes.STRING,
@@ -24,24 +24,24 @@ Product.init(
       type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
-        isDecimal: true
-      }
+        isDecimal: true,
+      },
     },
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
       validate: {
-        isNumeric: true
-      }
+        isNumeric: true,
+      },
     },
     category_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'category',
-        key: 'id'
-      }
-    }
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
@@ -49,7 +49,7 @@ Product.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'product',
-  }
+  },
 );
 
 module.exports = Product;
