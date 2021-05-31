@@ -1,4 +1,5 @@
 # E-Commerce-Back-End
+
 # Project Title
 
   <h1 align="center">E-Commerce-Back-End 👋</h1>
@@ -54,15 +55,28 @@ THEN I am able to successfully create, update, and delete data in my database
 
 # Installation
 
-  npm install
+## Installation
 
-# Usage
+Installation is a process of installing the dependencies required.
+Initialize node package manager and then run the following commands;  
+`npm install mysql2`
+`npm install sequelize`
+`npm install dotenv`
 
-  to generate proffesional readme.md
+## Usage
+
+ In order to use the application, first ensure that MySQL is installed in your environment.
+ Then, from the project root folder enter the sql shell and run the following command:
+`source db/schema.sql`
+Exit the sql shell and return to the command line still within your root project folder.
+Run the following commands;
+`npm run seed`
+`npm start`
 
 # License
 
  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 ## License
 
   Licensed under MIT.<br/>
@@ -77,8 +91,10 @@ THEN I am able to successfully create, update, and delete data in my database
 
   not necessary
 
-## Video 
+## Video
+
 [Link To video]<https://drive.google.com/file/d/1UEvBVSITNSrRx6B7wiPh7CorifZ38F0J/view>
+
 # Contact Information
 
   ![Developer Profile Picture](undefined)
